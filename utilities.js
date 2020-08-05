@@ -1,5 +1,5 @@
 let print = {
-    s: function(string){
+    s(string){
         console.log(`${string}`);
     }
 }
