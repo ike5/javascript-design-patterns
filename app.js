@@ -1,18 +1,10 @@
-"use strict"
-
-const nameKey = 'name';
-const ageKey = 'age';
-const jobKey = 'job';
-let uniqueToken = 0;
-
-function getUniqueKey(key){
-    return `${key}_${uniqueToken++}`;
-}
+const p = require('./utilities');
 
 let person = {
-    [getUniqueKey(nameKey)]: 'Matt',
-    [getUniqueKey(ageKey)]: 27,
-    [getUniqueKey(jobKey)]: 'Software engineer'
-};
+    sayName: function(name){
+        console.log(`My name is ${name}`);
+    }
+}
 
-console.log(person);
+person.sayName('ike');
+
