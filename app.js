@@ -3,11 +3,16 @@
 const nameKey = 'name';
 const ageKey = 'age';
 const jobKey = 'job';
+let uniqueToken = 0;
+
+function getUniqueKey(key){
+    return `${key}_${uniqueToken++}`;
+}
 
 let person = {
-    [nameKey]: 'Matt',
-    [ageKey]: 27,
-    [jobKey]: 'Software engineer'
+    [getUniqueKey(nameKey)]: 'Matt',
+    [getUniqueKey(ageKey)]: 27,
+    [getUniqueKey(jobKey)]: 'Software engineer'
 };
 
 console.log(person);
