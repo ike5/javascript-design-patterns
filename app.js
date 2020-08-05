@@ -1,10 +1,10 @@
+"use strict"
 const p = require('./utilities');
 
 let person = {
-    sayName: function(name){
+    sayName(name){
         console.log(`My name is ${name}`);
     }
-}
+};
 
-person.sayName('ike');
-
+person.sayName('Isen');
