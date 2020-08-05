@@ -1,19 +1,12 @@
 "use strict"
 const p = require('./utilities');
 
-// applicable to getter and setter oject
+const methodKey = 'sayName';
+
 let person = {
-    name_: '',
-    get name() {
-        return this.name_;
-    },
-    set name(name) {
-        this.name_ = name;
-    },
-    sayName() {
-        console.log(`My ame is ${this.name_}`)
+    [methodKey](name) {
+        console.log(`My name is ${name}`);
     }
 }
 
-person.name = "Matt";
-person.sayName();
+person.sayName('ike');

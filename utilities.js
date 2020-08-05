@@ -1,5 +1,7 @@
+const methodName = 's';
+
 let print = {
-    s(string){
+    [methodName](string) {
         console.log(`${string}`);
     }
 }
