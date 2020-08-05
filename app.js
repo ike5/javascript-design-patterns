@@ -1,10 +1,11 @@
 "use strict"
 
-function makePerson(a){
-    return{
-        name: a
-    };
-}
+const nameKey = 'name';
+const ageKey = 'age';
+const jobKey = 'job';
 
-var person = makePerson("Matt");
-console.log(person.name);
+let person = {};
+person[nameKey] = 'Matt';
+person[ageKey] = 27;
+person[jobKey] = 'Software engineer';
+console.log(person);
