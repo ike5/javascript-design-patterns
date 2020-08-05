@@ -1,15 +1,13 @@
 "use strict"
 const p = require('./utilities');
 
-// object destructring
-
+// reuse as object literal
 let person = {
     name: 'Matt',
     age: 27
-};
+}
 
-let { name: personName, age: personAge } = person;
+let { name, age } = person;
 
-console.log(personAge);
-console.log(personName);
-
+console.log(name);
+console.log(age);
