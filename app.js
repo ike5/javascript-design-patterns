@@ -1,12 +1,15 @@
 "use strict"
 const p = require('./utilities');
 
-const methodKey = 'sayName';
+// object destructring
 
 let person = {
-    [methodKey](name) {
-        console.log(`My name is ${name}`);
-    }
-}
+    name: 'Matt',
+    age: 27
+};
 
-person.sayName('ike');
+let { name: personName, age: personAge } = person;
+
+console.log(personAge);
+console.log(personName);
+
