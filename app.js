@@ -1,8 +1,10 @@
 "use strict"
-let name = 'Matt';
 
-let person = {
-    name:name
+function makePerson(name){
+    return{
+        name
+    };
 }
 
+let person = makePerson('Ike');
 console.log(person);
