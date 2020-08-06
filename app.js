@@ -1,16 +1,16 @@
-// factory pattern
+// Function constructor pattern
 
-function createPerson(name, age, job){
-    let o = new Object();
-    o.name = name;
-    o.age = age;
-    o.job = job;
-    o.sayName = function(){
+function Person(name, age, job){
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.sayName = function(){
         console.log(this.name);
     };
-    return o;
 }
 
-let person1 = createPerson("Nicholas", 27, "Software Engineer");
-let person2 = createPerson("Joey", 54, "Human Resources");
+let person1 = new Person("Nicholas", 28, "Software Engineer");
+let person2 = new Person("Gred", 38, "Doctor");
 
+person1.sayName();
+person2.sayName();
