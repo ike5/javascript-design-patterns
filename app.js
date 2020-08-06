@@ -1,13 +1,16 @@
-"use strict"
-const p = require('./utilities');
+// factory pattern
 
-// reuse as object literal
-let person = {
-    name: 'Matt',
-    age: 27
+function createPerson(name, age, job){
+    let o = new Object();
+    o.name = name;
+    o.age = age;
+    o.job = job;
+    o.sayName = function(){
+        console.log(this.name);
+    };
+    return o;
 }
 
-let { name, age } = person;
+let person1 = createPerson("Nicholas", 27, "Software Engineer");
+let person2 = createPerson("Joey", 54, "Human Resources");
 
-console.log(name);
-console.log(age);
