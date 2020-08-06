@@ -14,3 +14,8 @@ let person2 = new Person("Gred", 38, "Doctor");
 
 person1.sayName();
 person2.sayName();
+
+console.log(person1 instanceof Object)
+console.log(person1 instanceof Person);
+console.log(person2 instanceof Object);
+console.log(person2 instanceof Person);
