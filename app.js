@@ -1,9 +1,9 @@
-class SpaceShuttle{
-    constructor(targetPlanet){
-        this.targetPlanet = targetPlanet;
+class Animal{
+    constructor(breed){
+        this.breed = breed;
     }
 }
 
-let zeus = new SpaceShuttle('Jupiter');
+let dog = new Animal('husky');
 
-console.log(zeus);
+console.log(dog);
