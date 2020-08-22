@@ -1,21 +1,20 @@
-class Book{
-    constructor(author){
-        this._author = author;
+class Animal{
+    constructor(species){
+        this._species = species;
     }
 
-    get writer(){
-        return this._author;
+    get type(){
+        return this._species;
     }
 
-    set writer(updatedAuthor){
-        this._author = updatedAuthor;
+    set type(animalType){
+        this._species = animalType;
     }
 }
 
-let greenEggs = new Book('Dr.Seuss');
-
-console.log(greenEggs);
-console.log(greenEggs.writer);
-greenEggs.writer = 'Jodi Picoulx';
-console.log(greenEggs);
-console.log(greenEggs.writer);
+let dog = new Animal('canis');
+console.log(dog);
+console.log(dog.type);
+dog.type = 'gatus';
+console.log(dog);
+console.log(dog.type);
