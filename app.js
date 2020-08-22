@@ -1,20 +1,20 @@
-class Animal{
-    constructor(species){
-        this._species = species;
+class Vehicle {
+    constructor(model) {
+        this._model = model;
     }
 
-    get type(){
-        return this._species;
+    get mainModel(){
+        return this._model;
     }
-
-    set type(animalType){
-        this._species = animalType;
+    
+    set mainModel(newModel){
+        this._model = newModel;
     }
 }
 
-let dog = new Animal('canis');
-console.log(dog);
-console.log(dog.type);
-dog.type = 'gatus';
-console.log(dog);
-console.log(dog.type);
+let bus = new Vehicle('six wheeler');
+console.log(bus);
+console.log(bus.mainModel);
+bus.mainModel = '2 wheeler';
+console.log(bus);
+console.log(bus.mainModel);
