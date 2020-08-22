@@ -1,7 +1,7 @@
-// prototype pattern
+var SpaceShuttle = function(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+}
 
-function Person(){}
+var zeus = new SpaceShuttle('Jupiter');
 
-console.log(typeof Person.prototype);
-console.log(Person.prototype);
-console.log(Person.prototype.constructor === Person);
+console.log(zeus);
