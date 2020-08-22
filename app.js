@@ -1,5 +1,7 @@
-export const add = (x, y) => {
-    return  x + y;
+const add = (x, y) => {
+    return x + y;
 }
 
-// Doesn't work. Why?
+module { add };
+
+//not sure why doesn't work
