@@ -1,7 +1,7 @@
-var SpaceShuttle = function(targetPlanet) {
-    this.targetPlanet = targetPlanet;
+let Animal = function(mammal) {
+    this.mammal = mammal;
 }
 
-var zeus = new SpaceShuttle('Jupiter');
+let giraffe = new Animal('giraffe');
 
-console.log(zeus);
+console.log(giraffe);
