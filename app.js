@@ -1,9 +1,9 @@
-class Animal{
-    constructor(breed){
-        this.breed = breed;
+class Vehicle{
+    constructor(type){
+        this.type = type;
     }
 }
 
-let dog = new Animal('husky');
+let bus = new Vehicle('industrial');
 
-console.log(dog);
+console.log(bus);
