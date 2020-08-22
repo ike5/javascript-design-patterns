@@ -1,7 +1,7 @@
-let Animal = function(mammal) {
-    this.mammal = mammal;
+let Vehicle = function(machine){
+    this.machine = machine;
 }
 
-let giraffe = new Animal('giraffe');
+let bus = new Vehicle('many wheels');
 
-console.log(giraffe);
+console.log(bus);
