@@ -1,20 +1,26 @@
-class Vehicle {
-    constructor(model) {
-        this._model = model;
+class Thermostat {
+    constructor(fahrenheit) {
+        this._fahrenheit = fahrenheit;
     }
 
-    get mainModel(){
-        return this._model;
+    get temperature() {
+        return (5 / 9) * (this._fahrenheit - 32);
     }
-    
-    set mainModel(newModel){
-        this._model = newModel;
+
+    set temperature(celsius) {
+        this._fahrenheit = (celsius * 9.0) / 5 + 32;
     }
 }
 
-let bus = new Vehicle('six wheeler');
-console.log(bus);
-console.log(bus.mainModel);
-bus.mainModel = '2 wheeler';
-console.log(bus);
-console.log(bus.mainModel);
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+console.log(thermos);
+
+let temp = thermos.temperature; // 24.44 in Celsius
+console.log(temp);
+
+
+thermos.temperature = 26;
+console.log(thermos.temperature, thermos);
+
+temp = thermos.temperature; // 26 in Celsius
+console.log(temp);
