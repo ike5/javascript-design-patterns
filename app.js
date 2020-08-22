@@ -1,7 +1,9 @@
-let Vehicle = function(machine){
-    this.machine = machine;
+class SpaceShuttle{
+    constructor(targetPlanet){
+        this.targetPlanet = targetPlanet;
+    }
 }
 
-let bus = new Vehicle('many wheels');
+let zeus = new SpaceShuttle('Jupiter');
 
-console.log(bus);
+console.log(zeus);
