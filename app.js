@@ -1,14 +1,16 @@
-/*
-Square bracket method
-*/
+/**
+ * ECMAScript 5 only compatible approaches
+ */
 
-// Using new Object() and {} technique
-let firstObj = {};
-let secondObj = new Object();
+// Object.DefineProperty method
+var newObject = {};
 
-// Square bracket method
-firstObj["someKey"] = "Hello World!";
-let key = firstObj["someKey"];
-let key1 = firstObj.someKey;
+Object.defineProperty(newObject, "someKey", {
+    value: "for more control of the property's behavior",
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
 
-console.log(key, key1)
+
+console.table(newObject)
