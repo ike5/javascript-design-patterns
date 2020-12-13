@@ -2,15 +2,19 @@
  * ECMAScript 5 only compatible approaches
  */
 
-// Object.DefineProperty method
-var newObject = {};
-
-Object.defineProperty(newObject, "someKey", {
-    value: "for more control of the property's behavior",
-    writable: true,
-    enumerable: true,
-    configurable: true
-});
+// defineProp()
 
 
-console.table(newObject)
+var defineProp = function(obj, key, value){
+    let config = {};
+    config.value = value;
+    Object.defineProperty(obj, key, config);
+};
+
+var person = Object.create(null);
+
+defineProp(person, "car", "Delorean");
+defineProp(person, "dateOfBirth", "1981");
+defineProp(person, "hasBeard", false);
+
+console.log(person.dateOfBirth);
