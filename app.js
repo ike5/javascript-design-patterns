@@ -1,16 +1,23 @@
-let newObject = {};
+let defineProp = function (obj, key, value) {
+    let config = {};
+    config.value = value;
+    Object.defineProperty(obj, key, config);
+};
 
-Object.defineProperties(newObject, {
-    "someKey": {
-        value: "Hello World!",
-        writable: true
-    },
-    "anotherKey": {
-        value: "Foo bar",
-        writable: false
-    }
-});
+// or simpler yet
+let d = function (obj, key, value) {
+    let config = {};
+    config.value = value;
+    Object.defineProperty(obj, key, config);
+}
 
-console.table(newObject);
-console.log(newObject.someKey);
-console.log(newObject.anotherKey);
+let geography = Object.create(null);
+defineProp(geography, "Salifornia", "Sacramento");
+console.log(geography.Salifornia);
+
+let world = Object.create(null);
+d(world, "USA", true);
+d(world, "China", true);
+d(world, "France", false);
+d(world, "Germany", false);
+console.log(world["USA"])
