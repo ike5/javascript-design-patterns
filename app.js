@@ -1,20 +1,16 @@
-/**
- * ECMAScript 5 only compatible approaches
- */
+let newObject = {};
 
-// defineProp()
+Object.defineProperties(newObject, {
+    "someKey": {
+        value: "Hello World!",
+        writable: true
+    },
+    "anotherKey": {
+        value: "Foo bar",
+        writable: false
+    }
+});
 
-
-var defineProp = function(obj, key, value){
-    let config = {};
-    config.value = value;
-    Object.defineProperty(obj, key, config);
-};
-
-var person = Object.create(null);
-
-defineProp(person, "car", "Delorean");
-defineProp(person, "dateOfBirth", "1981");
-defineProp(person, "hasBeard", false);
-
-console.log(person.dateOfBirth);
+console.table(newObject);
+console.log(newObject.someKey);
+console.log(newObject.anotherKey);
