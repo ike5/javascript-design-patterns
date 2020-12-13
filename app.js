@@ -1,15 +1,14 @@
 /*
-Method two for creating an object
+Square bracket method
 */
 
-// Using new Object() 
-let nObj = new Object();
+// Using new Object() and {} technique
+let firstObj = {};
+let secondObj = new Object();
 
-nObj.name = "Ike";
-nObj.age = 31;
-nObj.skill = "Intermediate";
-nObj.ageTimesThree = function () {
-    return x * 3;
-}
+// Square bracket method
+firstObj["someKey"] = "Hello World!";
+let key = firstObj["someKey"];
+let key1 = firstObj.someKey;
 
-console.table(nObj);
+console.log(key, key1)
