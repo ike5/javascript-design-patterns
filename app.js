@@ -1,19 +1,17 @@
-function Car(model, year, miles) {
+function Person(name, age, profession, nationality) {
 
-    this.model = model;
-    this.year = year;
-    this.miles = miles;
+    this.name = name;
+    this.age = age;
+    this.profession = profession;
+    this.nationality = nationality;
 }
 
-// Note here that we are using the Object.prototype.newMethod rather than
-// Object.prototype so as to avoid redefining the prototype object
-Car.prototype.toString = function () {
-    return this.model + " has done " + this.miles + " miles";
+Person.prototype.toString = function () {
+    return `${this.name} is ${this.age} years old.\n${this.name} works as a ${this.profession} and is from ${this.nationality}.`;
 };
 
-// Usage:
-let civic = new Car("Honda Civic", 2009, 20000);
-let toyota = new Car("Toyota Camry", 2020, 5000);
+let ike = new Person("Ike Maldonado", 31, "Computer Scientist", "The United States, Brazil, and Puerto Rico");
+let desi = new Person("Desi Tafoya", 49, "Manager", "Mexico and The United States of America");
 
-console.log(civic.toString());
-console.log(toyota.toString());
+console.log(desi.toString());
+console.log(ike.toString());
