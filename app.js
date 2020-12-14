@@ -1,29 +1,18 @@
-let defineProp = function (obj, key, value) {
-    let config = {};
-    config.value = value;
-    Object.defineProperty(obj, key, config);
-};
+// Basic Constructor pattern
 
-// or simpler yet
-let d = function (obj, key, value) {
-    let config = {};
-    config.value = value;
-    Object.defineProperty(obj, key, config);
+function Car(model, year, miles){
+    this.model = model;
+    this.year = year;
+    this.miles = miles;
+
+    this.toString = function(){
+        return this.model + " has done " + this.miles + " miles";
+    };
 }
 
-let geography = Object.create(null);
-defineProp(geography, "Salifornia", "Sacramento");
+let civic = new Car("Honda Civic", 2009, 27300);
+let mondeo = new Car("Ford Mondeo", 2010, 5000);
 
-let world = Object.create(null);
-d(world, "USA", true);
-d(world, "China", true);
-d(world, "France", false);
-d(world, "Germany", false);
-
-
-// Inheritance
-let leader = Object.create(world); // inherits from world object
-d(leader, "Trump", "The United States of America");
-
-console.log(leader.Trump) // subclass property
-console.log(leader.France); // inherited property
+console.log(civic.toString());
+console.table(civic);
+console.log(civic);
