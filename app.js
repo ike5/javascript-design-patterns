@@ -1,17 +1,23 @@
-function Person(name, age, profession, nationality) {
-
-    this.name = name;
-    this.age = age;
-    this.profession = profession;
-    this.nationality = nationality;
+function Book(title, author, yearPublished, isbn) {
+    this.title = title;
+    this.author = author;
+    this.yearPublished = yearPublished;
+    this.isbn = isbn;
 }
 
-Person.prototype.toString = function () {
-    return `${this.name} is ${this.age} years old.\n${this.name} works as a ${this.profession} and is from ${this.nationality}.`;
+Object.prototype.toString = function () {
+
+    return (
+        `${this.title} is a fascinating book written by ${this.author} and published in ${this.yearPublished}. If you are looking for more information about ${this.title}, please use the ISBN: ${this.isbn}.
+        Thank you.`
+    );
 };
 
-let ike = new Person("Ike Maldonado", 31, "Computer Scientist", "The United States, Brazil, and Puerto Rico");
-let desi = new Person("Desi Tafoya", 49, "Manager", "Mexico and The United States of America");
+let javascript = new Book("JavaScript Explained", "Zac Gordon", 2020, 9798623901415);
+let javascript_patterns = new Book("Learning JavaScript Design Patterns",
+"Addy Osmani",
+2012,
+9781449331818);
 
-console.log(desi.toString());
-console.log(ike.toString());
+console.log(javascript.toString());
+console.log(javascript_patterns.toString());
