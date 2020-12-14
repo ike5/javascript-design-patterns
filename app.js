@@ -16,3 +16,8 @@ let mondeo = new Car("Ford Mondeo", 2010, 5000);
 console.log(civic.toString());
 console.table(civic);
 console.log(civic);
+
+console.log(mondeo.toString());
+console.table(mondeo);
+console.table(mondeo.toString()); // nothing prints
+console.log(mondeo);
