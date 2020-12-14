@@ -1,23 +1,46 @@
-function Book(title, author, yearPublished, isbn) {
-    this.title = title;
-    this.author = author;
-    this.yearPublished = yearPublished;
-    this.isbn = isbn;
-}
+let myObjectLiteral = {
+    variableKey: "variableValue",
 
-Object.prototype.toString = function () {
-
-    return (
-        `${this.title} is a fascinating book written by ${this.author} and published in ${this.yearPublished}. If you are looking for more information about ${this.title}, please use the ISBN: ${this.isbn}.
-        Thank you.`
-    );
+    functionKey: function () {
+        return "Hello World!";
+    }
 };
 
-let javascript = new Book("JavaScript Explained", "Zac Gordon", 2020, 9798623901415);
-let javascript_patterns = new Book("Learning JavaScript Design Patterns",
-"Addy Osmani",
-2012,
-9781449331818);
 
-console.log(javascript.toString());
-console.log(javascript_patterns.toString());
+let myModule = {
+
+    myProperty: "someValue",
+
+    // object literals can contain properties and methods.
+    // e.g. we can define a further object for module configuration:
+    myConfig: {
+        useCaching: true,
+        language: "en"
+    },
+
+    // a very basic method
+    myMethod: function () {
+        console.log("Where in the world is Paul Irish today?");
+    },
+
+    // output a value based on the current configuration
+    myMethod2: function () {
+        console.log("Caching is:" + (this.myConfig.useCaching) ? "enabled" : "disabled");
+    },
+
+    // override the current configuration
+    myMethod3: function(newConfig){
+        
+        if(typeof newConfig === "object"){
+            this.myConfig = newConfig;
+            console.log(this.myConfig.language);
+        }
+    }
+}
+
+myModule.myMethod();
+myModule.myMethod2();
+myModule.myMethod3({
+    language: "fr",
+    useCaching: false
+});

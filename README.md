@@ -4,3 +4,7 @@
 This repository contains examples from the text and examples of my own describing
 JavaScript design patterns. 
 >Each example can be found in app.js in separate commits.
+
+
+### The Module Pattern
+##### Object Literals
